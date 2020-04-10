@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'korisnici/:id', component: KorisnikComponent},
 
   {path: 'paketi', component:PaketiComponent},
-  
+
   {path: 'operatori', component: OperateriComponent}
 ];
 
