@@ -1,0 +1,20 @@
+<table class="table table-borderless" *ngFor="let korisnik of korisnici">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Broj</th>
+      <th>PaketID</th>
+      <th>Datum prijave</th>
+      <th>Datum odjave</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{korisnik.id}}</td>
+      <td>{{korisnik.broj}}</td>
+      <td>{{korisnik.paketId}}</td>
+      <td>{{korisnik.datumPrijave}}</td>
+      <td>{{korisnik.datumOdjave}}</td>
+    </tr>
+  </tbody>
+</table>
