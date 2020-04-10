@@ -15,4 +15,12 @@ export class KorisnikServiceService {
   getAll(): Observable<Korisnik[]>{
     return this.http.get<Korisnik[]>(this.url + 'korisnik')
   }
+
+  getOne(id:number): Observable<Korisnik>{
+    return this.http.get<Korisnik>(this.url + id);
+  }
+
+  deleteOne(id:number): Observable<Korisnik>{
+    return this.http.delete<Korisnik>(this.url + id);
+  }
 }

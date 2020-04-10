@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { KorisniciComponent } from './components/korisnici/korisnici.component';
 import { OperateriComponent } from './components/operateri/operateri.component';
 import { PaketiComponent } from './components/paketi/paketi.component';
+import { KorisnikComponent } from './components/korisnik/korisnik.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KorisniciComponent,
     OperateriComponent,
-    PaketiComponent
+    PaketiComponent,
+    KorisnikComponent
   ],
   imports: [
     BrowserModule,

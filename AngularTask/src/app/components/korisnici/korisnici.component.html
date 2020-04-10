@@ -6,15 +6,28 @@
       <th>PaketID</th>
       <th>Datum prijave</th>
       <th>Datum odjave</th>
+      <th>More</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{korisnik.id}}</td>
-      <td>{{korisnik.broj}}</td>
-      <td>{{korisnik.paketId}}</td>
-      <td>{{korisnik.datumPrijave}}</td>
-      <td>{{korisnik.datumOdjave}}</td>
+      <td>{{ korisnik.id }}</td>
+      <td>{{ korisnik.broj }}</td>
+      <td>{{ korisnik.paketId }}</td>
+      <td>{{ korisnik.datumPrijave }}</td>
+      <td>{{ korisnik.datumOdjave }}</td>
+      <td>
+        <button class="btn btn-primary">
+          <a
+            [routerLink]="['/korisnic', korisnik.id]"
+            routerLinkActive="router-link-active"
+            >Edit</a
+          >
+        </button>
+        <button class="btn btn-danger" (click)="deleteKorisnik(korisnik.id)">
+            Delete
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
