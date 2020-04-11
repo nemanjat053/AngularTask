@@ -1,16 +1,13 @@
 <ul class="list-group">
-    <li class="list-group-item">Id: {{ paket.id }}</li>
-    <li class="list-group-item">Broj: {{ paket.operaterId }}</li>
-    <li class="list-group-item">PaketId: {{ paket.naziv }}</li>
-    <li class="list-group-item">Datum prijave: {{ paket.cena }}</li>
-    
-    <div class="row mt-2">
-      <div class="col text-center">
-        <a routerLink="/artikli" class="btn btn-primary mr-2">Nazad</a>
-        <a class="btn btn-warning" (click)="navigateToEdit(paket.id)"
-          >Izmijeni</a
-        >
-      </div>
+  <li class="list-group-item">Id: {{ paket.id }}</li>
+  <li class="list-group-item">Broj: {{ paket.operaterId }}</li>
+  <li class="list-group-item">PaketId: {{ paket.naziv }}</li>
+  <li class="list-group-item">Datum prijave: {{ paket.cena }}</li>
+
+  <div class="row mt-2">
+    <div class="col text-center">
+      <a routerLink="/artikli" class="btn btn-primary mr-2">Nazad</a>
+      <a class="btn btn-warning" (click)="navigateToEdit(paket.id)">Izmijeni</a>
     </div>
-  </ul>
-  
+  </div>
+</ul>

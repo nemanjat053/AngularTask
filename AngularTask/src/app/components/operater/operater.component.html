@@ -1,0 +1,14 @@
+<ul class="list-group">
+  <li class="list-group-item">Id: {{ operater.id }}</li>
+  <li class="list-group-item">Naziv: {{ operater.naziv }}</li>
+  <li class="list-group-item">Pozivni broj: {{ operater.pozivniBroj }}</li>
+
+  <div class="row mt-2">
+    <div class="col text-center">
+      <a routerLink="/artikli" class="btn btn-primary mr-2">Nazad</a>
+      <a class="btn btn-warning" (click)="navigateToEdit(operater.id)"
+        >Izmijeni</a
+      >
+    </div>
+  </div>
+</ul>

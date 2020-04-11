@@ -8,22 +8,21 @@ import { PaketiComponent } from './components/paketi/paketi.component';
 import { OperateriComponent } from './components/operateri/operateri.component';
 import { KorisnikComponent } from './components/korisnik/korisnik.component';
 import { PaketComponent } from './components/paket/paket.component';
-import { OperatorComponent } from './components/operator/operator.component';
-
+import { OperaterComponent } from './components/operater/operater.component';
 
 const routes: Routes = [
-  {path: 'korisnici', component:KorisniciComponent},
-  {path: 'korisnici/:id', component: KorisnikComponent},
+  { path: 'korisnici', component: KorisniciComponent },
+  { path: 'korisnici/:id', component: KorisnikComponent },
 
-  {path: 'paketi', component:PaketiComponent},
-  {path: 'paketi/:id', component: PaketComponent},
+  { path: 'paketi', component: PaketiComponent },
+  { path: 'paketi/:id', component: PaketComponent },
 
-  {path: 'operatori', component: OperateriComponent},
-  {path: 'operatori/:id', component: OperatorComponent}
+  { path: 'operateri', component: OperateriComponent },
+  { path: 'operateri/:id', component: OperaterComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
