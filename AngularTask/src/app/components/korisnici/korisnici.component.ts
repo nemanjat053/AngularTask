@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { KorisnikServiceService } from 'src/app/service/korisnik-service.service';
 import { Router } from '@angular/router';
 import { Korisnik } from 'src/app/model/Korisnik';
+import { Paket } from 'src/app/model/Paket';
+import { PaketServiceService } from 'src/app/service/paket-service.service';
 
 @Component({
   selector: 'app-korisnici',
@@ -10,11 +12,22 @@ import { Korisnik } from 'src/app/model/Korisnik';
 })
 export class KorisniciComponent implements OnInit {
   korisnici: Korisnik[];
+  formaActive: boolean = false;
 
-  constructor(private ks: KorisnikServiceService, private router: Router) {}
+  paketi: Paket[];
+
+  constructor(
+    private ks: KorisnikServiceService,
+    private ps: PaketServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getKorisnici();
+  }
+
+  getPaketi() {
+    this.ps.getAll().subscribe((response) => (this.paketi = response));
   }
 
   getKorisnici() {
@@ -25,5 +38,9 @@ export class KorisniciComponent implements OnInit {
     this.ks.deleteOne(id).subscribe((response) => {
       this.getKorisnici();
     });
+  }
+
+  dodajNovog() {
+    this.formaActive = true;
   }
 }

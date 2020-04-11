@@ -32,3 +32,10 @@
     </tr>
   </tbody>
 </table>
+
+<button class="btn btn-primary" (click)="dodajNovog()">
+  Dodaj novog korisnika
+</button>
+
+<app-korisnik-add-new *ngIf="formaActive" [paketi]="paketi">
+</app-korisnik-add-new>
