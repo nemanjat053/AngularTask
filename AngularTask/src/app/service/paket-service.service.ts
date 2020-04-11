@@ -4,24 +4,27 @@ import { Observable } from 'rxjs';
 import { Paket } from '../model/Paket';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PaketServiceService {
-  
-  private url = "http://localhost:3000/";
+  private url = 'http://localhost:3000/';
   private paketPrefix = 'paket';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getAll(): Observable<Paket[]>{
+  getAll(): Observable<Paket[]> {
     return this.http.get<Paket[]>(this.url + this.paketPrefix);
   }
 
-  getOne(id: number): Observable<Paket>{
+  getOne(id: number): Observable<Paket> {
     return this.http.get<Paket>(this.url + this.paketPrefix + `/${id}`);
   }
 
-  delete(id: number): Observable<Paket>{
-    return this.http.delete<Paket>(this.url + this.paketPrefix + `/${id}`)
+  delete(id: number): Observable<Paket> {
+    return this.http.delete<Paket>(this.url + this.paketPrefix + `/${id}`);
+  }
+
+  update(id: number, paket: Paket): Observable<Paket> {
+    return this.http.put<Paket>(this.url + this.paketPrefix + `/${id}`, paket);
   }
 }
