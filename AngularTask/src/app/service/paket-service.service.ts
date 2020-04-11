@@ -17,8 +17,8 @@ export class PaketServiceService {
     return this.http.get<Paket[]>(this.url + this.paketPrefix);
   }
 
-  getOne(): Observable<Paket>{
-    return this.http.get<Paket>(this.url + this.paketPrefix);
+  getOne(id: number): Observable<Paket>{
+    return this.http.get<Paket>(this.url + this.paketPrefix + `/${id}`);
   }
 
   delete(id: number): Observable<Paket>{
