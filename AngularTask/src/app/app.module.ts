@@ -14,6 +14,9 @@ import { OperaterComponent } from './components/operater/operater.component';
 import { KorisnikEditComponent } from './components/korisnik-edit/korisnik-edit.component';
 import { OperaterEditComponent } from './components/operater-edit/operater-edit.component';
 import { PaketEditComponent } from './components/paket-edit/paket-edit.component';
+import { KorisnikAddNewComponent } from './components/korisnik-add-new/korisnik-add-new.component';
+import { OperaterAddNewComponent } from './components/operater-add-new/operater-add-new.component';
+import { PaketAddNewComponent } from './components/paket-add-new/paket-add-new.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { PaketEditComponent } from './components/paket-edit/paket-edit.component
     KorisnikEditComponent,
     OperaterEditComponent,
     PaketEditComponent,
+    KorisnikAddNewComponent,
+    OperaterAddNewComponent,
+    PaketAddNewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
