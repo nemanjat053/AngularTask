@@ -1,1 +1,29 @@
-<p>operateri works!</p>
+<table class="table table-borderless" *ngFor="let operater of operateri">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Naziv</th>
+      <th>Pozivni broj</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ operater.id }}</td>
+      <td>{{ operater.naziv }}</td>
+      <td>{{ operater.pozivniBroj }}</td>
+      <td>
+        <button class="btn btn-primary">
+          <a
+            [routerLink]="['/operater', operater.id]"
+            routerLinkActive="router-link-active"
+            style="color: white;"
+            >Edit</a
+          >
+        </button>
+        <button class="btn btn-danger" (click)="deleteOperater(operater.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

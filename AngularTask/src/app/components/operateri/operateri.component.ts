@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Operater } from 'src/app/model/Operater';
+import { OperaterServiceService } from 'src/app/service/operater-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-operateri',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperateriComponent implements OnInit {
 
-  constructor() { }
+  operateri: Operater[];
+
+  constructor(private os: OperaterServiceService, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.getOperatere();
+  }
+
+  getOperatere(){
+    this.os.getAll().subscribe((response) => this.operateri = response);
+  }
+
+  deleteOperater(id: number){
+    this.os.delete(id).subscribe((response) => this.getOperatere());
   }
 
 }
