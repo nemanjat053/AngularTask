@@ -11,9 +11,9 @@ import { PaketiComponent } from './components/paketi/paketi.component';
 import { KorisnikComponent } from './components/korisnik/korisnik.component';
 import { PaketComponent } from './components/paket/paket.component';
 import { OperaterComponent } from './components/operater/operater.component';
-import { KorisnikEditComponent } from './korisnik-edit/korisnik-edit.component';
-import { OperaterEditComponent } from './operater-edit/operater-edit.component';
-import { PaketEditComponent } from './paket-edit/paket-edit.component';
+import { KorisnikEditComponent } from './components/korisnik-edit/korisnik-edit.component';
+import { OperaterEditComponent } from './components/operater-edit/operater-edit.component';
+import { PaketEditComponent } from './components/paket-edit/paket-edit.component';
 
 @NgModule({
   declarations: [

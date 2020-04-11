@@ -1,0 +1,23 @@
+<h3>Edit operater</h3>
+<form (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="">Naziv</label>
+    <input
+      type="text"
+      name="broj"
+      class="form-control"
+      [(ngModel)]="operater.naziv"
+    />
+  </div>
+  <div class="form-group">
+    <label for="">Pozivni broj</label>
+    <input
+      type="text"
+      name="paketId"
+      class="form-control"
+      [(ngModel)]="operater.pozivniBroj"
+    />
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Izmijeni" />
+</form>

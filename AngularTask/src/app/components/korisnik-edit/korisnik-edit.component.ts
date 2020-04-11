@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { KorisnikServiceService } from '../service/korisnik-service.service';
+import { KorisnikServiceService } from '../../service/korisnik-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Korisnik } from '../model/Korisnik';
+import { Korisnik } from '../../model/Korisnik';
 
 @Component({
   selector: 'app-korisnik-edit',

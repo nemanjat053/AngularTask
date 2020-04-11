@@ -8,12 +8,12 @@
     {
       "id": 2,
       "naziv": "Telenor",
-      "skracenica": "063"
+      "pozivniBroj": "063"
     },
     {
       "id": 3,
       "naziv": "Vip",
-      "skracenica": "060"
+      "pozivniBroj": "060"
     }
   ],
   "paket": [

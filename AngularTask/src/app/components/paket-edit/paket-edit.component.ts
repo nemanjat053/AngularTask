@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Paket } from '../model/Paket';
-import { PaketServiceService } from '../service/paket-service.service';
+import { Paket } from '../../model/Paket';
+import { PaketServiceService } from '../../service/paket-service.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
