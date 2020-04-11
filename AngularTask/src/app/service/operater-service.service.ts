@@ -12,7 +12,7 @@ export class OperaterServiceService {
 
   private url: string = "http://localhost:3000/";
 
-  private operatorPrefix = 'operator';
+  private operatorPrefix = 'operater';
 
   getAll(): Observable<Operater[]>{
     return this.http.get<Operater[]>(this.url + this.operatorPrefix);

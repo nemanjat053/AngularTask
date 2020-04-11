@@ -13,7 +13,6 @@ export class KorisnikServiceService {
   private url = "http://localhost:3000/";
 
   private korisnikPrefix = 'korisnik';
-  private paketPrefix = 'paket';
 
 
   getAll(): Observable<Korisnik[]>{

@@ -1,1 +1,32 @@
-<p>paketi works!</p>
+<table class="table table-borderless" *ngFor="let paket of paketi">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Operater ID</th>
+        <th>Naziv</th>
+        <th>Cena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ paket.id }}</td>
+        <td>{{ paket.operaterId }}</td>
+        <td>{{ paket.naziv }}</td>
+        <td>{{ paket.cena }}</td>
+        <td>
+          <button class="btn btn-primary">
+            <a
+              [routerLink]="['/paketi', paket.id]"
+              routerLinkActive="router-link-active"
+              style="color: white;"
+              >Edit</a
+            >
+          </button>
+          <button class="btn btn-danger" (click)="deletePaket(paket.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
