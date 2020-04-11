@@ -9,6 +9,8 @@ import { KorisniciComponent } from './components/korisnici/korisnici.component';
 import { OperateriComponent } from './components/operateri/operateri.component';
 import { PaketiComponent } from './components/paketi/paketi.component';
 import { KorisnikComponent } from './components/korisnik/korisnik.component';
+import { PaketComponent } from './paket/paket.component';
+import { OperatorComponent } from './operator/operator.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { KorisnikComponent } from './components/korisnik/korisnik.component';
     KorisniciComponent,
     OperateriComponent,
     PaketiComponent,
-    KorisnikComponent
+    KorisnikComponent,
+    PaketComponent,
+    OperatorComponent
   ],
   imports: [
     BrowserModule,

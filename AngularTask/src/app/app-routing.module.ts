@@ -7,6 +7,8 @@ import { KorisniciComponent } from './components/korisnici/korisnici.component';
 import { PaketiComponent } from './components/paketi/paketi.component';
 import { OperateriComponent } from './components/operateri/operateri.component';
 import { KorisnikComponent } from './components/korisnik/korisnik.component';
+import { PaketComponent } from './paket/paket.component';
+import { OperatorComponent } from './operator/operator.component';
 
 
 const routes: Routes = [
@@ -14,8 +16,10 @@ const routes: Routes = [
   {path: 'korisnici/:id', component: KorisnikComponent},
 
   {path: 'paketi', component:PaketiComponent},
+  {path: 'paketi/:id', component: PaketComponent},
 
-  {path: 'operatori', component: OperateriComponent}
+  {path: 'operatori', component: OperateriComponent},
+  {path: 'operatori/:id', component: OperatorComponent}
 ];
 
 @NgModule({
