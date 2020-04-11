@@ -1,5 +1,12 @@
 <div class="container">
-  <h1 style="text-align: center;">{{ title }}</h1>
+  <h1 style="text-align: center;">
+    <a
+      [routerLink]="['*']"
+      routerLinkActive="router-link-active"
+      class="nav-link"
+      >{{ title }}</a
+    >
+  </h1>
   <nav class="navbar navbar-expand-sm bg-light justify-content-center">
     <ul class="navbar-nav">
       <li class="nav-item">

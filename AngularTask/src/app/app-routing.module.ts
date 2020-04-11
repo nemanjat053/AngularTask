@@ -9,6 +9,7 @@ import { OperateriComponent } from './components/operateri/operateri.component';
 import { KorisnikComponent } from './components/korisnik/korisnik.component';
 import { PaketComponent } from './components/paket/paket.component';
 import { OperaterComponent } from './components/operater/operater.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: 'korisnici', component: KorisniciComponent },
@@ -19,6 +20,8 @@ const routes: Routes = [
 
   { path: 'operateri', component: OperateriComponent },
   { path: 'operateri/:id', component: OperaterComponent },
+
+  { path: '**', component: KorisniciComponent },
 ];
 
 @NgModule({
