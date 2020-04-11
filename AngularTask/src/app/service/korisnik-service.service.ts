@@ -13,7 +13,6 @@ export class KorisnikServiceService {
   private url = "http://localhost:3000/";
 
   private korisnikPrefix = 'korisnik';
-  private operatorPrefix = 'operator';
   private paketPrefix = 'paket';
 
 
@@ -22,10 +21,10 @@ export class KorisnikServiceService {
   }
 
   getOne(id:number): Observable<Korisnik>{
-    return this.http.get<Korisnik>(this.url + this.korisnikPrefix + '/' + id);
+    return this.http.get<Korisnik>(this.url + this.korisnikPrefix + `/${id}`);
   }
 
   deleteOne(id:number): Observable<Korisnik>{
-    return this.http.delete<Korisnik>(this.url + this.korisnikPrefix + '/' + id);
+    return this.http.delete<Korisnik>(this.url + this.korisnikPrefix + `/${id}`);
   }
 }
