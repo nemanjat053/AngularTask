@@ -29,9 +29,11 @@ export class KorisnikComponent implements OnInit {
 
   getKorisnik() {
     this.ks
-      .getOne(this.activatedRoute.snapshot.params["id"])
+      .getOne(this.activatedRoute.snapshot.params['id'])
       .subscribe((response) => (this.korisnik = response));
   }
 
-  navigateToEdit(id: number) {}
+  navigateToEdit(id: number) {
+    this.router.navigate(['/korisnici', id, 'edit']);
+  }
 }
