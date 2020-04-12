@@ -58,7 +58,7 @@ export class KorisniciComponent implements OnInit {
         datumOdjave: null,
         datumPrijave: null,
       };
-      this.onSubmit.emit({ message: 'data_changed' });
+      this.onSubmit.emit({ message: 'new korisnik added' });
     });
   }
 }
