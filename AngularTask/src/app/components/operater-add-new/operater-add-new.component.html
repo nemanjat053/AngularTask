@@ -1,1 +1,21 @@
-<p>operater-add-new works!</p>
+<form (ngSubmit)="submit()">
+  <div class="form-group">
+    <label>Naziv</label>
+    <input
+      type="text"
+      class="form-control"
+      name="naziv"
+      [(ngModel)]="noviOperater.naziv"
+    />
+  </div>
+  <div class="form-group">
+    <label>Pozivni broj</label>
+    <input
+      type="text"
+      name="pozivniBroj"
+      class="form-control"
+      [(ngModel)]="noviOperater.pozivniBroj"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Add new</button>
+</form>

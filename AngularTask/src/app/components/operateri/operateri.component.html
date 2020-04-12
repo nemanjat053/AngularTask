@@ -27,3 +27,12 @@
     </tr>
   </tbody>
 </table>
+
+<button class="btn btn-primary" (click)="dodajNovog()">
+  Dodaj novog operatera
+</button>
+
+<app-operater-add-new
+  *ngIf="formaActive"
+  (onSubmit)="save($event)"
+></app-operater-add-new>

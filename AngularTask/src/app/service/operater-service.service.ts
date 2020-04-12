@@ -33,4 +33,11 @@ export class OperaterServiceService {
       operater
     );
   }
+
+  save(noviOperater): Observable<Operater> {
+    return this.http.post<Operater>(
+      this.url + this.operatorPrefix,
+      noviOperater
+    );
+  }
 }
