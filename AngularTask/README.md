@@ -28,5 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Running app
-To run Angular App: In terminal type ng [ng server -o] to run app and opet in new tab &nbsp;
+To run Angular App: In terminal type ng [ng server -o] to run app and opet in new tab</br>
 To run json-server: In terminal navigate to [/server] folder and type [json-server --watch db.json] to start and watch db.json file
