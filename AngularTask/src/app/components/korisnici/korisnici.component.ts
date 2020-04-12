@@ -24,6 +24,7 @@ export class KorisniciComponent implements OnInit {
 
   ngOnInit(): void {
     this.getKorisnici();
+    this.getPaketi();
   }
 
   getPaketi() {

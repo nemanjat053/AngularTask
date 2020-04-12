@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Paket } from 'src/app/model/Paket';
+import { Korisnik } from 'src/app/model/Korisnik';
 
 @Component({
   selector: 'app-korisnik-add-new',
@@ -8,11 +9,24 @@ import { Paket } from 'src/app/model/Paket';
 })
 export class KorisnikAddNewComponent implements OnInit {
   @Input() paketi: Paket[];
+
+  noviKorisnik: Korisnik = {
+    id: null,
+    broj: null,
+    paketId: null,
+    datumPrijave: null,
+    datumOdjave: null,
+  };
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  submit() {}
+  submit() {
+    console.log(this.noviKorisnik);
+  }
 
-  selectRacun(id: number) {}
+  selectPaket(id: number) {
+    this.noviKorisnik.paketId = id;
+  }
 }

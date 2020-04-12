@@ -1,18 +1,41 @@
 <form (ngSubmit)="submit()">
   <div class="form-group">
-    <label for="email">Broj</label>
-    <input type="text" class="form-control" />
+    <label>Broj</label>
+    <input
+      type="text"
+      class="form-control"
+      name="broj"
+      [(ngModel)]="noviKorisnik.broj"
+    />
   </div>
   <div class="form-group">
-    <label for="pwd">Paket Id</label>
+    <label>Paket </label>
+    <select class="custom-select" name="topic">
+      <option
+        *ngFor="let paket of paketi"
+        [(ngModel)]="noviKorisnik.paketId"
+        (click)="selectPaket(paket.id)"
+        >{{ paket.naziv }}</option
+      >
+    </select>
   </div>
   <div class="form-group">
-    <label for="pwd">Datum prijave</label>
-    <input type="text" class="form-control" />
+    <label>Datum prijave</label>
+    <input
+      type="text"
+      name="datumPrijave"
+      class="form-control"
+      [(ngModel)]="noviKorisnik.datumPrijave"
+    />
   </div>
   <div class="form-group">
-    <label for="pwd">Datum odjave</label>
-    <input type="text" class="form-control" />
+    <label>Datum odjave</label>
+    <input
+      type="text"
+      name="datumOdjave"
+      class="form-control"
+      [(ngModel)]="noviKorisnik.datumOdjave"
+    />
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
