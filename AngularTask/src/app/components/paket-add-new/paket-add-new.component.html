@@ -1,1 +1,32 @@
-<p>paket-add-new works!</p>
+<form (ngSubmit)="submit()">
+  <div class="form-group">
+    <label>Naziv</label>
+    <input
+      type="text"
+      class="form-control"
+      name="naziv"
+      [(ngModel)]="noviPaket.naziv"
+    />
+  </div>
+  <div class="form-group">
+    <label>Operater </label>
+    <select
+      class="custom-select"
+      name="topic"
+      name="operater.naziv"
+      (change)="onChangeHandler($event)"
+    >
+      <option *ngFor="let operater of operateri">{{ operater.naziv }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Cena</label>
+    <input
+      type="text"
+      name="cena"
+      class="form-control"
+      [(ngModel)]="noviPaket.cena"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

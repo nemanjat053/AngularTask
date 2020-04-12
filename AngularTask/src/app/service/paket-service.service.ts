@@ -27,4 +27,8 @@ export class PaketServiceService {
   update(id: number, paket: Paket): Observable<Paket> {
     return this.http.put<Paket>(this.url + this.paketPrefix + `/${id}`, paket);
   }
+
+  save(noviPaket): Observable<Paket> {
+    return this.http.post<Paket>(this.url + this.paketPrefix, noviPaket);
+  }
 }

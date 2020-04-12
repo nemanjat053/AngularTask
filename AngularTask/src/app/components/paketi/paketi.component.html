@@ -29,3 +29,14 @@
     </tr>
   </tbody>
 </table>
+
+<button class="btn btn-primary" (click)="dodajNovog()">
+  Dodaj novi paket
+</button>
+
+<app-paket-add-new
+  *ngIf="formActive"
+  (onSubmit)="save($event)"
+  [operateri]="operateri"
+>
+</app-paket-add-new>
