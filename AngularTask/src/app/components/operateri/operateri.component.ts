@@ -38,7 +38,7 @@ export class OperateriComponent implements OnInit {
 
   save(noviOperater: Operater) {
     this.os.save(noviOperater).subscribe((response) => {
-      this.getOperatere;
+      this.getOperatere();
       noviOperater = {
         id: null,
         naziv: null,
