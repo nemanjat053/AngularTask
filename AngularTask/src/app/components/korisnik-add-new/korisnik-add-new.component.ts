@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Paket } from 'src/app/model/Paket';
 import { Korisnik } from 'src/app/model/Korisnik';
 
@@ -9,6 +9,8 @@ import { Korisnik } from 'src/app/model/Korisnik';
 })
 export class KorisnikAddNewComponent implements OnInit {
   @Input() paketi: Paket[];
+
+  @Output() onSubmit: EventEmitter<Korisnik> = new EventEmitter();
 
   noviKorisnik: Korisnik = {
     id: null,
@@ -22,11 +24,20 @@ export class KorisnikAddNewComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submit() {
-    console.log(this.noviKorisnik);
-  }
-
   selectPaket(id: number) {
     this.noviKorisnik.paketId = id;
+  }
+
+  submit() {
+    this.onSubmit.emit(this.noviKorisnik);
+  }
+
+  // * Loop through array of paketi and take paketId by paket.naziv
+  onChangeHandler(event: any) {
+    this.paketi.forEach((paket) => {
+      if (event.target.value === paket.naziv) {
+        this.noviKorisnik.paketId = paket.id;
+      }
+    });
   }
 }

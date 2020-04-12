@@ -33,4 +33,11 @@ export class KorisnikServiceService {
       korisnik
     );
   }
+
+  save(noviKorisnik): Observable<Korisnik> {
+    return this.http.post<Korisnik>(
+      this.url + this.korisnikPrefix,
+      noviKorisnik
+    );
+  }
 }

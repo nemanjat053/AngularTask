@@ -10,13 +10,15 @@
   </div>
   <div class="form-group">
     <label>Paket </label>
-    <select class="custom-select" name="topic">
-      <option
-        *ngFor="let paket of paketi"
-        [(ngModel)]="noviKorisnik.paketId"
-        (click)="selectPaket(paket.id)"
-        >{{ paket.naziv }}</option
-      >
+    <select
+      class="custom-select"
+      name="topic"
+      name="paket.naziv"
+      (change)="onChangeHandler($event)"
+    >
+      <option *ngFor="let paket of paketi" (click)="selectPaket(paket.id)">{{
+        paket.naziv
+      }}</option>
     </select>
   </div>
   <div class="form-group">

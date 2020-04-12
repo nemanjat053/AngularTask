@@ -37,5 +37,9 @@
   Dodaj novog korisnika
 </button>
 
-<app-korisnik-add-new *ngIf="formaActive" [paketi]="paketi">
+<app-korisnik-add-new
+  *ngIf="formaActive"
+  [paketi]="paketi"
+  (onSubmit)="save($event)"
+>
 </app-korisnik-add-new>

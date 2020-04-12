@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { KorisnikServiceService } from 'src/app/service/korisnik-service.service';
 import { Router } from '@angular/router';
 import { Korisnik } from 'src/app/model/Korisnik';
@@ -15,6 +15,8 @@ export class KorisniciComponent implements OnInit {
   formaActive: boolean = false;
 
   paketi: Paket[];
+
+  @Output() onSubmit: EventEmitter<object> = new EventEmitter();
 
   constructor(
     private ks: KorisnikServiceService,
@@ -43,5 +45,20 @@ export class KorisniciComponent implements OnInit {
 
   dodajNovog() {
     this.formaActive = true;
+  }
+
+  save(noviKorisnik: Korisnik) {
+    this.ks.save(noviKorisnik).subscribe((response) => {
+      this.getKorisnici();
+      this.getPaketi();
+      noviKorisnik = {
+        id: null,
+        broj: null,
+        paketId: null,
+        datumOdjave: null,
+        datumPrijave: null,
+      };
+      this.onSubmit.emit({ message: 'data_changed' });
+    });
   }
 }
