@@ -31,13 +31,4 @@ export class KorisnikAddNewComponent implements OnInit {
   submit() {
     this.onSubmit.emit(this.noviKorisnik);
   }
-
-  // * Loop through array of paketi and take paketId by paket.naziv
-  onChangeHandler(event: any) {
-    this.paketi.forEach((paket) => {
-      if (event.target.value === paket.naziv) {
-        this.noviKorisnik.paketId = paket.id;
-      }
-    });
-  }
 }
